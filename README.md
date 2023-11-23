@@ -24,6 +24,13 @@ Pour aller plus vite, veuillez cloner le repository dans projet gatling en java
 </repositories>
 </h2>
 
+<repositories>
+ <repository>
+   <id>confluent</id>
+   <url>https://packages.confluent.io/maven/</url>
+ </repository>
+</repositories>
+
 <h2>
 <dependency>
  <groupId>ru.tinkoff</groupId>
@@ -32,6 +39,13 @@ Pour aller plus vite, veuillez cloner le repository dans projet gatling en java
  <scope>test</scope>
 </dependency>
 </h2>
+
+<dependency>
+ <groupId>ru.tinkoff</groupId>
+ <artifactId>gatling-kafka-plugin_2.13</artifactId>
+ <version>0.11.0</version>
+ <scope>test</scope>
+</dependency>
 
 
 <h3>
