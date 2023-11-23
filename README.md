@@ -3,4 +3,4 @@ Apache Kafka est une plateforme de streaming de données open source en temps r�
 
 Plus précisément, Kafka fonctionne comme un système de messagerie distribué, envoyant des données sous forme de messages entre producteurs (créateurs de messages) et consommateurs (lecteurs de messages). Les messages sont stockés dans des partitions et distribués sur plusieurs nœuds dans un cluster de serveurs Kafka.
 
-<img src="/Users/mac/Desktop/QA Testing/Performance Test/kafka_gatling/images/kafka.png">
+<img src="images/kafka.png">
