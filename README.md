@@ -49,7 +49,7 @@ Pour aller plus vite, veuillez cloner le repository dans projet gatling en java
 
 
 <h3>
-Ajouter lkes importations 
+Ajouter les importations 
 </h3>
 import ru.tinkoff.gatling.kafka.javaapi.protocol.*;
 import static io.gatling.javaapi.core.CoreDsl.*;
