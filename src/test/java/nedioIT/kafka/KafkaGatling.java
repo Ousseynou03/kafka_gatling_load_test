@@ -16,7 +16,7 @@ public class KafkaGatling extends Simulation{
     public static final String URL_REGISTRY = System.getProperty("URL_REGISTRY", "");
     public static final String USER_AUTH = System.getProperty("USER_AUTH", "");
     private final KafkaProtocolBuilder kafkaProtocol = kafka()
-            .topic("test")
+            .topic("kafka_indatacore")
             .properties(
                     Map.of(
                             ProducerConfig.ACKS_CONFIG, "1",
@@ -31,17 +31,21 @@ public class KafkaGatling extends Simulation{
     private final Headers headers = new RecordHeaders(new Header[]{new RecordHeader("test-header", "value".getBytes())});
 
     private final ScenarioBuilder kafkaProducer = scenario("Kafka Producer")
-            .exec(kafka("Simple Message")
+            .exec(kafka("Message de test kafka Indatacore")
                     .send("key","value", headers)
             );
 
     {
-        setUp(
+/*        setUp(
 
                 kafkaProducer.injectOpen(incrementUsersPerSec(1000)
                         .times(4).eachLevelLasting(60)
                         .separatedByRampsLasting(10)
                         .startingFrom(100.0))
+        ).protocols(kafkaProtocol);*/
+
+        setUp(
+                kafkaProducer.injectOpen(atOnceUsers(1))
         ).protocols(kafkaProtocol);
     }
 }
